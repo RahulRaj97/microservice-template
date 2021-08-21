@@ -1,0 +1,45 @@
+{
+  "name": "project_name",
+  "version": "1.0.0",
+  "description": "A Template for TypeScript GraphQL Microservice",
+  "main": "build/server.js",
+  "repository": "git@github.com:RahulRaj97/microservice-template.git",
+  "author": "Rahul Raj",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "NODE_ENV=development npx ts-node-dev src/server",
+    "start": "node build/server",
+    "test": "npx jest -i",
+    "clear": "rm logs/*",
+    "test-watch": "npx jest --watch",
+    "deploy": "NODE_ENV=alpha docker-compose up --detach --build",
+    "deploy-alpha": "yarn build && NODE_ENV=alpha docker-compose up --detach --build",
+    "deploy-production": "yarn build && NODE_ENV=production docker-compose up --detach --build"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/graphql": "^14.5.0",
+    "@types/jest": "^27.0.1",
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.7.1",
+    "@types/uuid": "^8.3.1",
+    "graphql-tag": "^2.12.5",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "apollo-server": "^3.1.2",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.0.0",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.5.0",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "xml-js": "^1.6.11"
+  }
+}
