@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  app:
+    build: .
+    working_dir: /usr/app
+    ports:
+      - 4200:4200
+    stdin_open: true
+    tty: true
+    command: npm start

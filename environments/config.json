@@ -1,0 +1,24 @@
+{
+  "development": {
+    "apollo": {
+      "ssl": false,
+      "port": 4200,
+      "hostname": "localhost",
+      "introspection": true,
+      "tracing": true,
+      "debug": true,
+      "playground": true
+    }
+  },
+  "test": {
+    "apollo": {
+      "ssl": false,
+      "port": 4210,
+      "hostname": "localhost",
+      "introspection": true,
+      "tracing": true,
+      "debug": true,
+      "playground": true
+    }
+  }
+}
